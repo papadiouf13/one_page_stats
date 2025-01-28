@@ -1,4 +1,3 @@
-// src/components/Services.tsx
 import React from "react";
 import { motion } from "framer-motion";
 import Image1 from "../assets/images/IMG-CARD5.png";
@@ -33,7 +32,7 @@ const Services: React.FC = () => {
           métiers, vous améliorez la productivité de vos équipes...
         </p>
 
-        <div className="flex gap-6 justify-center mt-10">
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
           <motion.div
             className="service-card"
             initial={{ y: 20, opacity: 0 }}

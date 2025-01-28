@@ -1,4 +1,3 @@
-// src/components/Hero.tsx
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image1 from "../assets/images/image1.jpg";
@@ -13,13 +12,13 @@ const Hero: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 secondes
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600">
+    <div className="relative h-auto min-h-[600px] w-full overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600 mt-16">
       {/* Background sliding images */}
       <AnimatePresence mode="wait">
         {images.length > 0 && (

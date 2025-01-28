@@ -4,7 +4,15 @@
     margin: 0 auto;
     /* padding: 2rem; */
     text-align: center;
-  }
+}
+
+header {
+    position: fixed; /* Fix the header at the top */
+    left: 0;
+    right: 0;
+    z-index: 50; /* Ensure it stays above other content */
+}
+
   
   .logo {
     height: 3em; /* Changed from 6em to 4em */
@@ -79,4 +87,3 @@
     filter: grayscale(0%);
     opacity: 1;
   }
-  

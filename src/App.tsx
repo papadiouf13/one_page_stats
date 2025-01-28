@@ -1,4 +1,3 @@
-// src/App.tsx
 import Services from './components/Services'
 import ContactSection from './components/Contact-section'
 import Footer from './components/Footer'
@@ -10,10 +9,10 @@ import MissionEquipe from './components/breukh'
 
 function App() {
   return (
-    <div className="w-full flex flex-col overflow-x-hidden">
+    <div className="w-full flex flex-col overflow-x-hidden px-4 md:px-0">
       <Header />
       <Hero />
-      <Offre/>
+      <Offre />
       <Services />
       <Client />
       <MissionEquipe />

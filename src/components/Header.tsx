@@ -1,34 +1,47 @@
 // src/components/Header.tsx
-import React from 'react'
-import image from '../assets/images/Logo-stream-management.png'
+import React from 'react';
+import image from '../assets/images/Logo-stream-management.png';
+
 const Header: React.FC = () => {
   return (
-    <header className="bg-white shadow sticky top-0 z-50">
+    <header className="bg-blue-100 shadow sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-2 py-2 flex items-center justify-between">
         <div>
-          <img src={image} alt="" />
+          <img src={image} alt="Stream Management Logo" className="logo" />
         </div>
 
-        {/* Menu de navigation */}
         <nav>
           <ul className="flex items-center gap-6">
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Accueil</a>
+              <a href="#offres" className="text-gray-600 hover:text-gray-900">
+                Nos offres
+              </a>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Services</a>
+              <a href="#clients" className="text-gray-600 hover:text-gray-900">
+                Nos clients
+              </a>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
+              <a href="#services" className="text-gray-600 hover:text-gray-900">
+                Nos services
+              </a>
             </li>
             <li>
-              <a href="#" className="text-gray-600 hover:text-gray-900">À propos</a>
+              <a href="#about" className="text-gray-600 hover:text-gray-900">
+                Qui sommes-nous
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="text-gray-600 hover:text-gray-900">
+                Contactez-nous
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

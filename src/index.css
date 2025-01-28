@@ -1,1 +1,82 @@
 @import "tailwindcss";
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* padding: 2rem; */
+    text-align: center;
+  }
+  
+  .logo {
+    height: 3em; /* Changed from 6em to 4em */
+    padding: 0.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  .service-card {
+    width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Partie supérieure avec l'image en background */
+  .service-card-header {
+    height: 150px; /* Hauteur définie pour l'affichage de l'image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Partie inférieure */
+  .service-card-body {
+    padding: 20px;
+  }
+  
+  .service-card-body h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service-card-body p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  .client-logo {
+    width: 120px; /* Taille fixe des logos */
+    height: 80px; /* Hauteur fixe */
+    object-fit: contain; /* Permet de conserver le ratio des logos */
+    filter: grayscale(100%); /* Applique le gris par défaut */
+    opacity: 0.8;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+  }
+  
+  .client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  

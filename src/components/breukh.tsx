@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Profile1 from "../assets/images/profile1.jpg";
+import Profile2 from "../assets/images/profile2.jpg";
+import Profile3 from "../assets/images/profile3.jpg";
 
 const MissionEquipe: React.FC = () => {
     return (
@@ -31,7 +34,7 @@ const MissionEquipe: React.FC = () => {
                         viewport={{ once: true }}
                         className="text-gray-600 mb-4"
                     >
-                        Notre mission est d'accompagnée les entreprises,
+                        Notre mission est d'accompagner les entreprises,
                         notamment les grands acteurs du CAC 40, dans leur transformation digitale en apportant leur
                         expertise sur des sujets clés comme ECM (Enterprise Content Management), CCM (Customer
                         Communication Management) et Office 365.
@@ -115,38 +118,30 @@ const MissionEquipe: React.FC = () => {
 
                 {/* Membres de l'équipe */}
                 <div className="flex flex-col md:flex-row justify-center gap-6 mt-8">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                        viewport={{ once: true }}
-                        className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800">Mme MMM MMMM</h3>
-                        <p className="text-gray-600">Directrice Générale</p>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-                        viewport={{ once: true }}
-                        className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800">M LOREM LOREM</h3>
-                        <p className="text-gray-600">Président</p>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-                        viewport={{ once: true }}
-                        className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
-                    >
-                        <h3 className="text-lg font-semibold text-gray-800">M. LIP LIP</h3>
-                        <p className="text-gray-600">Responsable Conformité</p>
-                    </motion.div>
+                    {[
+                        { name: "Mme MMM MMMM", role: "Directrice Générale", image: Profile1 },
+                        { name: "M. LOREM LOREM", role: "Président", image: Profile2 },
+                        { name: "M. LIP LIP", role: "Responsable Conformité", image: Profile3 },
+                    ].map((person, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 * (index + 1) }}
+                            viewport={{ once: true }}
+                            className="p-4 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%] flex items-center gap-4"
+                        >
+                            <img
+                                src={person.image}
+                                alt={person.name}
+                                className="w-16 h-16 object-cover rounded-full border border-gray-300"
+                            />
+                            <div>
+                                <h3 className="text-lg font-semibold text-gray-800">{person.name}</h3>
+                                <p className="text-gray-600">{person.role}</p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </motion.div>
         </div>

@@ -35,7 +35,10 @@ header {
     color: #888;
   }
   .service-card {
+    display: flex;
+    flex-direction: column;
     width: 260px;
+    height: 380px; /* Hauteur fixe pour garantir l'uniformité */
     border-radius: 10px;
     overflow: hidden;
     background: #fff;
@@ -49,17 +52,21 @@ header {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
   
-  /* Partie supérieure avec l'image en background */
+  /* Partie supérieure : Image avec hauteur fixe */
   .service-card-header {
-    height: 150px; /* Hauteur définie pour l'affichage de l'image */
+    height: 150px; /* Assurer que toutes les images ont la même hauteur */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   
-  /* Partie inférieure */
+  /* Partie inférieure : Texte qui prend tout l’espace restant */
   .service-card-body {
-    padding: 20px;
+    flex-grow: 1; /* S'adapte à l’espace restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
   }
   
   .service-card-body h3 {
@@ -73,7 +80,9 @@ header {
     font-size: 0.95rem;
     color: #666;
     line-height: 1.4;
+    flex-grow: 1; /* S'assure que le texte prend l'espace disponible */
   }
+  
   .client-logo {
     width: 120px; /* Taille fixe des logos */
     height: 80px; /* Hauteur fixe */

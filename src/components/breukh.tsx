@@ -110,8 +110,7 @@ const MissionEquipe: React.FC = () => {
                     viewport={{ once: true }}
                     className="text-gray-600 text-center max-w-2xl mx-auto"
                 >
-                    Une équipe d'experts passionnés par la sécurité numérique et engagés dans la 
-                    protection renforcée des données vitales de votre entreprise.
+                    Une équipe d'experts engagés dans la transformation digitale, apportant leur savoir-faire et leur passion pour accompagner les entreprises dans leurs projets stratégiques.
                 </motion.p>
 
                 {/* Membres de l'équipe */}
@@ -123,8 +122,8 @@ const MissionEquipe: React.FC = () => {
                         viewport={{ once: true }}
                         className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
                     >
-                        <h3 className="text-lg font-semibold text-gray-800">Plipli pluiw</h3>
-                        <p className="text-gray-600">Directeur Général</p>
+                        <h3 className="text-lg font-semibold text-gray-800">Mme MMM MMMM</h3>
+                        <p className="text-gray-600">Directrice Générale</p>
                     </motion.div>
 
                     <motion.div
@@ -134,7 +133,7 @@ const MissionEquipe: React.FC = () => {
                         viewport={{ once: true }}
                         className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
                     >
-                        <h3 className="text-lg font-semibold text-gray-800">Breukh</h3>
+                        <h3 className="text-lg font-semibold text-gray-800">M LOREM LOREM</h3>
                         <p className="text-gray-600">Président</p>
                     </motion.div>
 
@@ -145,7 +144,7 @@ const MissionEquipe: React.FC = () => {
                         viewport={{ once: true }}
                         className="p-6 bg-gray-50 rounded-lg shadow-md w-full md:w-[30%]"
                     >
-                        <h3 className="text-lg font-semibold text-gray-800">Tiokoto bay</h3>
+                        <h3 className="text-lg font-semibold text-gray-800">M. LIP LIP</h3>
                         <p className="text-gray-600">Responsable Conformité</p>
                     </motion.div>
                 </div>
